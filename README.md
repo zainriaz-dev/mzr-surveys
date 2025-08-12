@@ -1,19 +1,26 @@
 This is a [Next.js](https://nextjs.org) project for an AI-enhanced survey.
 
+## 🔒 Security Setup (IMPORTANT)
+
+**⚠️ NEVER commit real API keys or secrets to git!**
+
+This repository uses environment variables to store sensitive credentials. Follow these steps:
+
+1. **Copy the template file:**
+   ```bash
+   cp .env.example .env.local
+   ```
+
+2. **Fill in your actual credentials** in `.env.local`:
+   - Replace `YOUR_AZURE_OPENAI_API_KEY` with your actual Azure OpenAI key
+   - Replace `YOUR_GEMINI_API_KEY` with your actual Google Gemini key
+   - Replace `YOUR_DEEPSEEK_API_KEY` with your actual DeepSeek key
+   - Replace `USERNAME:PASSWORD` with your MongoDB credentials
+   - Set a secure `ADMIN_PASSWORD`
+
+3. **Verify `.env.local` is in `.gitignore`** (it should already be)
+
 ## Getting Started
-
-First, create a `.env.local` in the repo root with:
-
-```
-MONGODB_URI=
-MONGODB_DB=survey
-
-ADMIN_PASSWORD=
-
-GEMINI_API_KEY=
-DEEPSEEK_API_KEY=
-AI_PROVIDER=gemini
-```
 
 Then run the development server:
 
