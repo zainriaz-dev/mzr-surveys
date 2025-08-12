@@ -1,60 +1,133 @@
-This is a [Next.js](https://nextjs.org) project for an AI-enhanced survey.
+# MZR Survey — AI-Enhanced Survey Platform
 
-## 🔒 Security Setup (IMPORTANT)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/m-z-r/mzr-survey/ci.yml?branch=main&style=for-the-badge)](https://github.com/m-z-r/mzr-survey/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
-**⚠️ NEVER commit real API keys or secrets to git!**
+An open-source survey platform designed to gather insights on technology access, healthcare, and youth-related challenges in Pakistan. It features a multi-lingual, mobile-first interface and leverages multiple AI providers (Azure OpenAI, Gemini, DeepSeek) for response enhancement, sentiment analysis, and generating actionable insights. The platform includes a secure admin dashboard for managing surveys, viewing analytics, and exporting data in various formats, including AI-generated PDF reports.
 
-This repository uses environment variables to store sensitive credentials. Follow these steps:
+## ✨ Features
 
-1. **Copy the template file:**
-   ```bash
-   cp .env.example .env.local
-   ```
+- **📱 Mobile-First Design:** Fully responsive, multi-step survey wizard optimized for all devices.
+- **🌐 Multi-Lingual Support:** Supports English, Urdu, and Roman Urdu for broader accessibility.
+- **🤖 AI-Powered Enhancements:**
+  - **Answer Refinement:** Users can optionally improve their answers for clarity, tone, and conciseness.
+  - **AI Assistant:** An integrated chatbot to help users understand questions.
+  - **Insight Generation:** AI-driven analysis of responses to identify trends, sentiment, and key themes.
+  - **Automated Reporting:** Generate comprehensive PDF and Markdown reports with AI-powered summaries.
+- **🛡️ Multi-Provider AI Backend:** Dynamically switches between Azure OpenAI, Google Gemini, and DeepSeek for reliability and cost-effectiveness.
+- **🔒 Secure Admin Panel:** Password-protected dashboard to manage surveys, view real-time analytics, and visualize data.
+- **📊 Data Export:** Download survey responses as JSON, CSV, or detailed PDF reports.
+- **🎨 Customizable Surveys:** (Coming Soon) A visual editor to create and deploy custom surveys.
+- **🚀 Deploy Anywhere:** Ready for deployment on Vercel or any Docker-compatible environment.
 
-2. **Fill in your actual credentials** in `.env.local`:
-   - Replace `YOUR_AZURE_OPENAI_API_KEY` with your actual Azure OpenAI key
-   - Replace `YOUR_GEMINI_API_KEY` with your actual Google Gemini key
-   - Replace `YOUR_DEEPSEEK_API_KEY` with your actual DeepSeek key
-   - Replace `USERNAME:PASSWORD` with your MongoDB credentials
-   - Set a secure `ADMIN_PASSWORD`
+## 🚀 Live Demo
 
-3. **Verify `.env.local` is in `.gitignore`** (it should already be)
+[Link to a live demo will be here]
 
-## Getting Started
+*(Screenshots and GIFs will be added here)*
 
-Then run the development server:
+##  Quick Start
+
+Follow these steps to get the project running locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/m-z-r/mzr-survey.git
+    cd mzr-survey
+    ```
+
+2.  **Install dependencies:**
+    This project uses `pnpm` for package management.
+    ```bash
+    pnpm install
+    ```
+
+3.  **Set up environment variables:**
+    Copy the example environment file and fill in your credentials.
+    ```bash
+    cp .env.example .env.local
+    ```
+    See the [Configuration](#-configuration) section for more details on each variable.
+
+4.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
+
+The application will be available at `http://localhost:3000`.
+
+## ⚙️ Configuration
+
+The application requires the following environment variables to be set in `.env.local`.
+
+| Variable                       | Description                                                                                                                             | Default                          |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| `NEXT_PUBLIC_BASE_URL`         | The base URL of the application.                                                                                                        | `http://localhost:3000`          |
+| `ADMIN_PASSWORD`               | Secure password to access the `/admin` dashboard.                                                                                       | `YOUR_SECURE_ADMIN_PASSWORD`     |
+| `MONGODB_URL`                  | Your MongoDB connection string.                                                                                                         | `mongodb://...`                  |
+| `AI_PROVIDER_ORDER`            | Comma-separated list of AI providers to use in order of priority (`azure_openai_primary`, `gemini`, `deepseek`).                         | `azure_openai_primary,...`       |
+| `AZURE_OPENAI_API_KEY`         | API key for your primary Azure OpenAI service.                                                                                          | -                                |
+| `AZURE_OPENAI_ENDPOINT`        | Endpoint URL for your primary Azure OpenAI service.                                                                                     | -                                |
+| `GEMINI_API_KEY`               | API key for Google Gemini.                                                                                                              | -                                |
+| `DEEPSEEK_API_KEY`             | API key for DeepSeek.                                                                                                                   | -                                |
+| ...                            | *(and other AI provider-specific variables)*                                                                                            |                                  |
+
+##  Scripts
+
+-   `pnpm dev`: Starts the development server with Turbopack.
+-   `pnpm build`: Creates a production-ready build.
+-   `pnpm start`: Starts the production server.
+-   `pnpm lint`: Lints the codebase for errors.
+-   `pnpm test`: (Coming Soon) Runs the test suite.
+
+## 🚢 Deployment
+
+### Vercel
+
+The easiest way to deploy this application is with Vercel.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fm-z-r%2Fmzr-survey)
+
+### Docker
+
+A `Dockerfile` and `docker-compose.yml` are planned. Once available, you will be able to deploy using:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# (Coming Soon)
+docker-compose up --build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) (or the port printed in the console) with your browser.
+## 🗺️ Roadmap & Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is actively under development. Key features on our roadmap include:
 
-Key routes:
+-   [ ] A full-featured visual survey editor.
+-   [ ] User authentication and roles.
+-   [ ] More advanced analytics and data visualization.
+-   [ ] Official Docker support.
 
-- `/` — landing page with hero and FAQs
-- `/survey` — multi-step wizard with AI-enhance controls
-- `/admin` — charts and export (requires `ADMIN_PASSWORD`, login at `/login`)
+We welcome contributions! Please see our `CONTRIBUTING.md` file for guidelines.
 
-## Learn More
+## 🛡️ Security
 
-To learn more about Next.js, take a look at the following resources:
+We take security seriously. If you discover a vulnerability, please follow our responsible disclosure policy outlined in `SECURITY.md`. **Do not open a public issue.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ❓ FAQ / Troubleshooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-   **Q: Why does the AI enhancement fail?**
+    -   A: This is usually due to an invalid or rate-limited API key. Check your `.env.local` file and the status of your AI provider account. The app will automatically try the next provider in your `AI_PROVIDER_ORDER` list.
 
-## Deploy on Vercel
+-   **Q: Can I use just one AI provider?**
+    -   A: Yes. Simply set `AI_PROVIDER_ORDER` to a single provider (e.g., `gemini`) and fill in the corresponding environment variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🙏 Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   [Next.js](https://nextjs.org)
+-   [Shadcn UI](https://ui.shadcn.com/)
+-   [Recharts](https://recharts.org/)
+-   The open-source community.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { GhibliFrame } from "./GhibliFrame";
 import ShareButton from "./ShareButton";
-import AdvancedAdvancedAnswerEnhancer from "./AdvancedAdvancedAnswerEnhancer";
+import AdvancedAnswerEnhancer from "./AdvancedAnswerEnhancer";
 import SurveyStatusDisplay from "./SurveyStatusDisplay";
 import { useSurveyScheduling, SurveySchedulingSettings } from "@/hooks/useSurveyScheduling";
 import toast from "react-hot-toast";
