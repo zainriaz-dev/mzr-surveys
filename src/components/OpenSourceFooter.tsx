@@ -105,5 +105,3 @@ export default function OpenSourceFooter({ mode = "inline", placement = "center"
     </Wrapper>
   );
 }
-
-
