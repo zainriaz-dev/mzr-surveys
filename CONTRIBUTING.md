@@ -12,13 +12,13 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 1. **Fork the repository** and clone your fork:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/PROJECT_NAME.git
-   cd PROJECT_NAME
+   git clone https://github.com/zainriaz-dev/mzr-surveys.git
+   cd mzr-surveys
    ```
 
 2. **Add the upstream remote**:
    ```bash
-   git remote add upstream https://github.com/ORIGINAL_OWNER/PROJECT_NAME.git
+   git remote add upstream https://github.com/zainriaz-dev/mzr-surveys.git
    ```
 
 3. **Install dependencies**:
