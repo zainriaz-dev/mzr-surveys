@@ -63,7 +63,7 @@ export default function BottomActionBar({
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <Link
-                    href="https://github.com/zain-riaz-dev/mzr-survey"
+                    href="https://github.com/zainriaz-dev/mzr-survey"
                     target="_blank"
                     className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors text-sm font-medium"
                   >
