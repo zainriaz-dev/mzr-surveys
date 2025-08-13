@@ -1,0 +1,63 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern Background with Gradient -->
+  <defs>
+    <radialGradient id="bg-gradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </radialGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="form-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background with rounded corners for iOS -->
+  <rect x="0" y="0" width="180" height="180" rx="40" fill="url(#bg-gradient)"/>
+  
+  <!-- Survey form representation -->
+  <rect x="30" y="30" width="120" height="120" rx="16" fill="url(#form-gradient)" opacity="0.95"/>
+  
+  <!-- Header bar -->
+  <rect x="40" y="40" width="100" height="12" rx="6" fill="url(#accent-gradient)"/>
+  
+  <!-- Survey items with modern Material Design style -->
+  <g opacity="0.85">
+    <!-- Question 1 - Completed -->
+    <rect x="40" y="65" width="70" height="10" rx="5" fill="#374151"/>
+    <circle cx="125" cy="70" r="8" fill="#10b981"/>
+    <path d="m120 70 3 3 6-6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Question 2 - Pending -->
+    <rect x="40" y="85" width="60" height="10" rx="5" fill="#374151"/>
+    <circle cx="115" cy="90" r="8" fill="none" stroke="#d1d5db" stroke-width="4"/>
+    
+    <!-- Question 3 - In Progress -->
+    <rect x="40" y="105" width="50" height="10" rx="5" fill="#374151"/>
+    <circle cx="105" cy="110" r="8" fill="#fbbf24"/>
+    <rect x="100" y="105" width="10" height="10" rx="2" fill="white" opacity="0.8"/>
+    
+    <!-- Question 4 - Completed -->
+    <rect x="40" y="125" width="65" height="10" rx="5" fill="#374151"/>
+    <circle cx="120" cy="130" r="8" fill="#10b981"/>
+    <path d="m115 130 2.5 2.5 5-5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Subtle accent elements -->
+  <circle cx="140" cy="50" r="8" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="140" cy="50" r="4" fill="#f59e0b"/>
+  
+  <!-- Small data visualization element -->
+  <g opacity="0.5">
+    <rect x="130" y="120" width="4" height="20" fill="#34d399" rx="2"/>
+    <rect x="136" y="110" width="4" height="30" fill="#6366f1" rx="2"/>
+    <rect x="142" y="115" width="4" height="25" fill="#fbbf24" rx="2"/>
+  </g>
+  
+  <!-- MZR Survey branding -->
+  <rect x="40" y="155" width="100" height="8" rx="4" fill="url(#accent-gradient)" opacity="0.8"/>
+  <text x="90" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="6" font-weight="600" fill="white">MZR SURVEY</text>
+</svg>

@@ -1,0 +1,28 @@
+{
+  "name": "MZR Survey — Pakistan 2025",
+  "short_name": "MZR Survey",
+  "description": "Advanced survey with AI assistant for technology, healthcare, and youth issues in Pakistan",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "apple-touch-icon"
+    }
+  ],
+  "theme_color": "#0D1B1E",
+  "background_color": "#0D1B1E",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["productivity", "social", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

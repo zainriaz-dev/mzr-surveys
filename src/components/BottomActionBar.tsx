@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+import { GitHub, Launch } from "@/components/icons/IconMappings";
 
 export default function BottomActionBar({
   title,
@@ -39,7 +40,7 @@ export default function BottomActionBar({
   }, []);
 
   return (
-    <div ref={barRef} className="fixed inset-x-0 bottom-0 z-50 bg-black/30 backdrop-blur-md border-t border-white/10">
+    <div ref={barRef} className="fixed inset-x-0 bottom-0 z-50 bg-black/30 backdrop-blur-md border-t border-white/10 bottom-action-bar">
       <div className="mx-auto max-w-5xl px-3 sm:px-4 py-2">
         <div className="flex flex-wrap items-center gap-2">
           {/* Share */}
@@ -64,15 +65,17 @@ export default function BottomActionBar({
                   <Link
                     href="https://github.com/zain-riaz-dev/mzr-survey"
                     target="_blank"
-                    className="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors text-sm font-medium"
+                    className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors text-sm font-medium"
                   >
+                    <GitHub sx={{ fontSize: 16 }} />
                     GitHub Repo
                   </Link>
                   <Link
                     href="https://zainriaz.dev"
                     target="_blank"
-                    className="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-slate-700/70 hover:bg-slate-600/80 transition-colors text-sm font-medium"
+                    className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-700/70 hover:bg-slate-600/80 transition-colors text-sm font-medium"
                   >
+                    <Launch sx={{ fontSize: 16 }} />
                     Portfolio
                   </Link>
                 </div>

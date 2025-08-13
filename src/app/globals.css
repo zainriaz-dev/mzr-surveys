@@ -99,6 +99,91 @@ body {
   }
 }
 
+/* Hero Section Animation Keyframes */
+@keyframes drift {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-3px);
+  }
+}
+
+@keyframes drift-slow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-8px) translateX(-8px);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-x-reverse {
+  0%, 100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-y {
+  0%, 100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-y-reverse {
+  0%, 100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  33% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  66% {
+    transform: translate(-50%, -50%) rotate(240deg);
+  }
+}
+
 .explain-highlight {
   outline: 2px dashed rgba(255, 255, 255, 0.5);
   outline-offset: 2px;
@@ -116,6 +201,41 @@ body {
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: drift-slow 12s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease-in-out infinite;
+}
+
+.animate-gradient-x-reverse {
+  animation: gradient-x-reverse 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-gradient-y {
+  animation: gradient-y 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-gradient-y-reverse {
+  animation: gradient-y-reverse 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 10s linear infinite;
 }
 
 .shimmer {
@@ -146,6 +266,28 @@ body {
 
 .btn-primary:active {
   transform: translateY(0);
+}
+
+/* Enhanced Glass Card */
+.glass-card {
+  background: rgba(15, 44, 44, 0.4);
+  border: 1px solid rgba(22, 66, 60, 0.6);
+  backdrop-filter: blur(15px);
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, 
+    rgba(16, 185, 129, 0.1), 
+    transparent, 
+    rgba(147, 51, 234, 0.1)
+  );
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .btn-secondary {
@@ -327,6 +469,14 @@ option {
   .safe-area-top {
     padding-top: max(16px, env(safe-area-inset-top));
   }
+  
+  .pb-safe {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+  
+  .pt-safe {
+    padding-top: max(8px, env(safe-area-inset-top));
+  }
 }
 
 /* Survey spacing to prevent overlap with floating elements */
@@ -337,8 +487,8 @@ option {
 /* Mobile Optimizations */
 @media (max-width: 640px) {
   :root {
-    --container-pad: 16px;
-    --card-pad: 16px;
+    --container-pad: 12px;
+    --card-pad: 14px;
     --control-pad-y: 10px;
     --control-pad-x: 12px;
     --font-size-base: 14px;
@@ -361,6 +511,16 @@ option {
     transform: scale(1) rotate(3deg);
   }
   
+  /* Enhanced mobile spacing for hero sections */
+  .hero-section {
+    padding-bottom: max(var(--bottom-bar-height, 160px), calc(80px + env(safe-area-inset-bottom)));
+  }
+  
+  /* Bottom action bar mobile optimization */
+  .bottom-action-bar {
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+  }
+  
   /* Ensure mobile dialogs are visible */
   .mobile-sheet {
     bottom: 0;
@@ -370,4 +530,23 @@ option {
     max-height: 80vh;
     padding-bottom: max(16px, env(safe-area-inset-bottom));
   }
+  
+  /* Optimize main content area on mobile */
+  main {
+    padding-bottom: max(var(--bottom-bar-height, 160px), calc(120px + env(safe-area-inset-bottom))) !important;
+  }
+}
+
+/* Futuristic star drift */
+@keyframes star-drift { 0%{transform:translateY(0)} 100%{transform:translateY(200px)} }
+.starfield::before{
+  content:'';
+  position:absolute;inset:0;
+  background:url('/stars.svg') repeat;
+  animation:star-drift 60s linear infinite;
+  opacity:.12;
+}
+/* neon edge on hover */
+.frame-neon:hover{
+  box-shadow:0 0 15px rgba(16,185,129,.5),0 0 30px rgba(16,185,129,.25);
 }

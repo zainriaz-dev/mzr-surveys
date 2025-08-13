@@ -42,6 +42,28 @@ const DICT: Record<Language, Record<string, string>> = {
     login_title: "Admin Login",
     password: "Password",
     login: "Log in",
+    // Homepage feature cards
+    privacy_first: "Privacy First",
+    privacy_first_desc: "Your data stays secure with transparent privacy practices",
+    ai_assist: "AI Assist",
+    ai_assist_desc: "Smart help to refine and clarify your responses",
+    multilingual: "Multilingual",
+    multilingual_desc: "Full support for Urdu, Roman Urdu, and English",
+    open_data: "Open Data",
+    open_data_desc: "Committed to transparency and open research",
+    // Homepage tags
+    villages: "Villages",
+    cities: "Cities",
+    youth: "Youth",
+    tech_access: "Tech Access",
+    learn_more: "Learn more",
+    // How it works section
+    share_your_reality: "1. Share your reality",
+    share_your_reality_desc: "Short, mobile-first questions about daily life and tech.",
+    ai_helps_clarify: "2. AI helps clarify",
+    ai_helps_clarify_desc: "Optional refine buttons and assistant for Urdu/Roman/English.",
+    build_small_tools: "3. Build small tools",
+    build_small_tools_desc: "We publish simple tools, guides and insights from results.",
   },
   ur: {
     app_title: "ایم زی آر سروے — پاکستان ۲۰۲۵",
@@ -73,6 +95,28 @@ const DICT: Record<Language, Record<string, string>> = {
     login_title: "ایڈمن لاگ اِن",
     password: "پاس ورڈ",
     login: "لاگ اِن",
+    // Homepage feature cards
+    privacy_first: "پرائیویسی اول",
+    privacy_first_desc: "آپ کا ڈیٹا شفاف رازداری کے طریقوں کے ساتھ محفوظ رہتا ہے",
+    ai_assist: "اے آئی مدد",
+    ai_assist_desc: "آپ کے جوابات کو بہتر اور واضح بنانے میں ذہین مدد",
+    multilingual: "کثیر لسانی",
+    multilingual_desc: "اردو، رومن اردو، اور انگریزی کی مکمل سہولت",
+    open_data: "کھلا ڈیٹا",
+    open_data_desc: "شفافیت اور کھلی تحقیق کے لیے پرعزم",
+    // Homepage tags
+    villages: "دیہات",
+    cities: "شہر",
+    youth: "نوجوان",
+    tech_access: "ٹیک رسائی",
+    learn_more: "مزید جانیں",
+    // How it works section
+    share_your_reality: "۱. اپنی حقیقت شیئر کریں",
+    share_your_reality_desc: "روزمرہ زندگی اور ٹیکنالوجی کے بارے میں مختصر، موبائل فرسٹ سوالات۔",
+    ai_helps_clarify: "۲. اے آئی واضح کرنے میں مدد کرتا ہے",
+    ai_helps_clarify_desc: "اردو/رومن/انگریزی کے لیے اختیاری بہتر بٹن اور اسسٹنٹ۔",
+    build_small_tools: "۳. چھوٹے ٹولز بنائیں",
+    build_small_tools_desc: "ہم نتائج سے سادہ ٹولز، گائیڈز اور بصیرت شائع کرتے ہیں۔",
   },
 };
 

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
+import { Poll } from "@/components/icons/IconMappings";
 
 export default function AppHeader() {
   const { t, lang, setLang } = useI18n();
@@ -8,7 +9,7 @@ export default function AppHeader() {
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/20 border-b border-white/10">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-white">
-          <span className="inline-block h-3 w-3 rounded-full bg-emerald-500" />
+          <Poll sx={{ fontSize: 24, color: '#10b981' }} />
           <span className="font-semibold">MZR Survey</span>
         </Link>
         <nav className="flex items-center gap-4 text-sm">

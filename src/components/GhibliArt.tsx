@@ -10,8 +10,10 @@ export default function GhibliArt({ className = "" }: GhibliArtProps) {
     <div className={`relative ${className}`}>
       <svg 
         viewBox="0 0 800 600" 
-        className="w-full h-full"
+        className="w-full h-full block"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
+        style={{ display: 'block' }}
       >
         {/* Gradient Definitions */}
         <defs>
