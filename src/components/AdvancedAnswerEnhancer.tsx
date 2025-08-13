@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import toast from "react-hot-toast";
 
 interface AdvancedAnswerEnhancerProps {
@@ -26,7 +26,6 @@ export default function AdvancedAnswerEnhancer({
   currentAnswer, 
   questionText, 
   onEnhanced, 
-  placeholder = "Write your answer...",
   questionType = 'text'
 }: AdvancedAnswerEnhancerProps) {
   const [isEnhancing, setIsEnhancing] = useState(false);
@@ -35,13 +34,8 @@ export default function AdvancedAnswerEnhancer({
   const [loadingSuggestions, setLoadingSuggestions] = useState(false);
   const [selectedMode, setSelectedMode] = useState<EnhancementMode>('improve');
 
-  // Early return after all hooks
-  if (!currentAnswer || !currentAnswer.trim()) {
-    return null;
-  }
-
   // Get AI-powered suggestions
-  const generateSuggestions = async () => {
+  const generateSuggestions = useCallback(async () => {
     if (suggestions.length > 0) return; // Don't regenerate if we already have them
     
     setLoadingSuggestions(true);
@@ -65,13 +59,18 @@ export default function AdvancedAnswerEnhancer({
     } finally {
       setLoadingSuggestions(false);
     }
-  };
+  }, [suggestions.length, currentAnswer, questionText, questionType]);
 
   useEffect(() => {
     if (showOptions && currentAnswer.trim().length > 10) {
       generateSuggestions();
     }
-  }, [showOptions, currentAnswer]);
+  }, [showOptions, currentAnswer, generateSuggestions]);
+
+  // Early return after all hooks
+  if (!currentAnswer || !currentAnswer.trim()) {
+    return null;
+  }
 
   const enhanceAnswer = async (mode: EnhancementMode) => {
     if (!currentAnswer.trim()) {

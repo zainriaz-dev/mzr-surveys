@@ -1,6 +1,6 @@
 # MZR Survey — AI-Enhanced Survey Platform
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/m-z-r/mzr-survey/ci.yml?branch=main&style=for-the-badge)](https://github.com/m-z-r/mzr-survey/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/zainriaz-dev/mzr-surveys/ci.yml?branch=main&style=for-the-badge)](https://github.com/zainriaz-dev/mzr-surveys/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
@@ -33,7 +33,7 @@ Follow these steps to get the project running locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/m-z-r/mzr-survey.git
+    git clone https://github.com/zainriaz-dev/mzr-surveys.git
     cd mzr-survey
     ```
 
@@ -87,7 +87,7 @@ The application requires the following environment variables to be set in `.env.
 
 The easiest way to deploy this application is with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fm-z-r%2Fmzr-survey)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzainriaz-dev%2Fmzr-surveys)
 
 ### Docker
 

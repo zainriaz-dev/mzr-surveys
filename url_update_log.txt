@@ -1,0 +1,32 @@
+MZR Survey - URL Update Log
+==========================
+
+Date: 2025-08-13
+Task: Update GitHub repository URLs from old to new location
+
+Changes Made:
+============
+
+1. Updated BottomActionBar.tsx (src/components/BottomActionBar.tsx)
+   - Line 66: Changed GitHub URL from:
+     "https://github.com/zain-riaz-dev/mzr-survey"
+     to:
+     "https://github.com/zainriaz-dev/mzr-surveys"
+
+Impact:
+=======
+- This change affects the footer component that appears on:
+  * Main page (localhost:3000/)
+  * Survey page (localhost:3000/survey)
+- Users clicking the "GitHub Repo" button in the open-source dropdown will now be directed to the correct repository
+
+Files NOT Changed:
+==================
+- README.md: Contains documentation and setup instructions with the correct m-z-r URLs
+- Other configuration files: Already pointing to correct URLs
+
+Notes:
+======
+- Only updated the user-facing GitHub link in the footer component as specifically requested
+- README.md and other documentation already had the correct m-z-r URLs
+- The change ensures consistency between the actual repository location and the link users see in the application
