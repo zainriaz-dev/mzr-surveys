@@ -1,6 +1,5 @@
 # MZR Survey — AI-Enhanced Survey Platform
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/zainriaz-dev/mzr-surveys/ci.yml?branch=main&style=for-the-badge)](https://github.com/zainriaz-dev/mzr-surveys/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
