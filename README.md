@@ -21,12 +21,6 @@ An open-source survey platform designed to gather insights on technology access,
 - **🎨 Customizable Surveys:** (Coming Soon) A visual editor to create and deploy custom surveys.
 - **🚀 Deploy Anywhere:** Ready for deployment on Vercel or any Docker-compatible environment.
 
-## 🚀 Live Demo
-
-[Link to a live demo will be here]
-
-*(Screenshots and GIFs will be added here)*
-
 ##  Quick Start
 
 Follow these steps to get the project running locally:
