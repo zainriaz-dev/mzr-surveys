@@ -68,11 +68,11 @@ The application requires the following environment variables to be set in `.env.
 
 ##  Scripts
 
--   `pnpm dev`: Starts the development server with Turbopack.
--   `pnpm build`: Creates a production-ready build.
--   `pnpm start`: Starts the production server.
--   `pnpm lint`: Lints the codebase for errors.
--   `pnpm test`: (Coming Soon) Runs the test suite.
+-   `npm dev`: Starts the development server with Turbopack.
+-   `npm build`: Creates a production-ready build.
+-   `npm start`: Starts the production server.
+-   `npm lint`: Lints the codebase for errors.
+-   `npm test`: (Coming Soon) Runs the test suite.
 
 ## 🚢 Deployment
 
@@ -104,7 +104,7 @@ We welcome contributions! Please see our `CONTRIBUTING.md` file for guidelines.
 
 ## 🛡️ Security
 
-We take security seriously. If you discover a vulnerability, please follow our responsible disclosure policy outlined in `SECURITY.md`. **Do not open a public issue.**
+We take security seriously. If you discover a vulnerability, please follow our responsible disclosure policy outlined in `SECURITY.md`. **Please do not report security issues publicly.**
 
 ## ❓ FAQ / Troubleshooting
 
