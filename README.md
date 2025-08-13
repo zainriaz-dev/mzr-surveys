@@ -31,9 +31,9 @@ Follow these steps to get the project running locally:
     ```
 
 2.  **Install dependencies:**
-    This project uses `pnpm` for package management.
+    This project uses `npm` for package management.
     ```bash
-    pnpm install
+    npm install
     ```
 
 3.  **Set up environment variables:**
@@ -45,7 +45,7 @@ Follow these steps to get the project running locally:
 
 4.  **Run the development server:**
     ```bash
-    pnpm dev
+    npm dev
     ```
 
 The application will be available at `http://localhost:3000`.
