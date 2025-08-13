@@ -75,7 +75,7 @@ export default function OpenSourceFooter({ mode = "inline", placement = "center"
           </div>
           <div className="mt-3 grid grid-cols-2 sm:flex sm:flex-row gap-2">
             <Link
-              href="https://github.com/zain-riaz-dev/mzr-survey"
+              href="https://github.com/zainriaz-dev/mzr-surveys"
               target="_blank"
               className="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 transition-colors text-sm font-medium"
             >
@@ -105,5 +105,3 @@ export default function OpenSourceFooter({ mode = "inline", placement = "center"
     </Wrapper>
   );
 }
-
-
